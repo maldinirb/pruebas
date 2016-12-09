@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AndroidCameraApi"></activity>
+        <activity android:name=".ShowImage"></activity>
 
     </application>
 </manifest>
