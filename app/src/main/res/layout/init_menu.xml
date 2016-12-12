@@ -9,10 +9,68 @@
         android:layout_width="wrap_content"
         android:layout_height="58dp"
         android:text="@string/use_camera"
-        android:onClick="openCamera"
+        android:onClick="launchCamera"
         android:layout_weight="0.43"
+        android:layout_marginBottom="24dp"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="29dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_marginTop="33dp"
+        android:id="@+id/text_email"
+        android:layout_below="@+id/text_surname"
+        android:layout_alignStart="@+id/text_surname"
+        android:hint="e-mail" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="39dp"
+        android:id="@+id/text_name"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/use_camera"
+        android:layout_marginEnd="21dp"
+        android:hint="Name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="30dp"
+        android:id="@+id/text_surname"
+        android:layout_below="@+id/text_name"
+        android:layout_alignStart="@+id/text_name"
+        android:hint="Surname" />
+
+    <TextView
+        android:text="Please, complete all the fields"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_id"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="216dp" />
+        android:layout_marginTop="44dp"
+        android:id="@+id/warning"
+        android:textColor="@color/colorAccent"
+        android:textStyle="normal|bold"
+        android:visibility="invisible" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="44dp"
+        android:id="@+id/text_id"
+        android:layout_below="@+id/text_email"
+        android:layout_alignStart="@+id/text_email"
+        android:hint="ID number" />
 
 </RelativeLayout>
