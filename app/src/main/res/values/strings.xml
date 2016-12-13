@@ -2,7 +2,7 @@
     <string name="app_name">MyCameraApp</string>
     <string name="take_picture">Take picture</string>
     <string name="use_camera">Camera</string>
-    <string name="close">Init</string>
+    <string name="close">Search</string>
     <string name="show_image">Show Image</string>
 
 </resources>

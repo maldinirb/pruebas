@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
@@ -15,43 +16,65 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:onClick="close"
+        android:onClick="buscar"
         android:text="@string/close"
         android:layout_marginEnd="17dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="ID number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/id"
-        android:layout_below="@+id/email"
-        android:layout_alignStart="@+id/email" />
-
-    <TextView
-        android:text="name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:id="@+id/name"
-        android:layout_below="@+id/image"
-        android:layout_toStartOf="@+id/image" />
-
-    <TextView
-        android:text="Surname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/surname"
-        android:layout_alignBaseline="@+id/name"
-        android:layout_alignBottom="@+id/name"
-        android:layout_toEndOf="@+id/name" />
-
-    <TextView
-        android:text="e-mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/email"
         android:layout_below="@+id/name"
         android:layout_alignStart="@+id/name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id"
+        android:layout_above="@+id/btn_close"
+        android:layout_alignStart="@+id/email" />
+
+    <TextView
+        android:text="Rellene el campo nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/warning"
+        android:textColor="@color/colorAccent"
+        android:layout_alignBaseline="@+id/btn_close"
+        android:layout_alignBottom="@+id/btn_close"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp"
+        tools:visibility="invisible"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/surname"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/id"
+        android:layout_alignEnd="@+id/warning"
+        android:layout_marginEnd="39dp"
+        android:layout_alignStart="@+id/image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:layout_marginBottom="16dp"
+        android:layout_above="@+id/surname"
+        android:layout_alignStart="@+id/warning"
+        android:layout_marginStart="12dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/hintName"
+        android:hint="Name"
+        android:layout_alignTop="@+id/name"
+        android:layout_alignEnd="@+id/btn_close" />
 </RelativeLayout>
